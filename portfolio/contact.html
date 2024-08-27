@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="animated-button">Home</a></li>
+                <li><a href="about.html" class="animated-button">About</a></li>
+                <li><a href="skills.html" class="animated-button">Skills</a></li>
+                <li><a href="projects.html" class="animated-button">Projects</a></li>
+                <li><a href="contact.html" class="animated-button">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content fade-in-content">
+        <h2>Contact Me</h2>
+        <p>If you would like to get in touch, feel free to reach out through the following platforms:</p>
+        <ul>
+            <li>Email: <a href="mailto:harirajgandhi1406@gmail.com" class="animated-link">harirajgandhi1406@gmail.com</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/hariraj-g-a8085629a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="animated-link" target="_blank">linkedin.com/in/hariraj-g-a8085629a</a></li>
+            <li>GitHub: <a href="https://github.com/Hari4458" class="animated-link" target="_blank">github.com/Hari4458</a></li>
+            <li>Instagram: <a href="https://www.instagram.com/its_hari_14xx?igsh=MWt2M3ZhYTllNGw4Mw==" class="animated-link" target="_blank">www.instagram.com/its_hari_14xx?igsh=MWt2M3ZhYTllNGw4Mw==</a></li>
+	    <a href="tel:9361411124"><span class="symbol">&#9742;</span> Contact : 9361411124</a>
+
+
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hariraj.G. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const sprinkleCount = 100;
+
+        for (let i = 0; i < sprinkleCount; i++) {
+            const sprinkle = document.createElement("div");
+            sprinkle.classList.add("sprinkle");
+            sprinkle.style.left = `${Math.random() * 100}vw`;
+            sprinkle.style.animationDuration = `${Math.random() * 5 + 5}s`;
+            sprinkle.style.animationDelay = `${Math.random() * 10}s`; 
+            document.body.appendChild(sprinkle);
+        }
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const sprinkleCount = 100;
+
+        for (let i = 0; i < sprinkleCount; i++) {
+            const sprinkle = document.createElement("div");
+            sprinkle.classList.add("sprinkle");
+            sprinkle.style.left = `${Math.random() * 100}vw`;
+            sprinkle.style.animationDuration = `${Math.random() * 5 + 5}s`; 
+            sprinkle.style.animationDelay = `${Math.random() * 10}s`; 
+            document.body.appendChild(sprinkle);
+        }
+
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                header.style.transform = "translateY(-100%)";
+            } else {
+                header.style.transform = "translateY(0)"; 
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
+        });
+    });
+</script>
+
+

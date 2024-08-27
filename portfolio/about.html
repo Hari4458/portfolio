@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Hariraj.G</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="animated-button">Home</a></li>
+                <li><a href="skills.html" class="animated-button">Skills</a></li>
+                <li><a href="projects.html" class="animated-button">Projects</a></li>
+                <li><a href="contact.html" class="animated-button">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h2>About Me</h2>
+        <div class="profile-container">
+            <div class="profile-image">
+                <img src="https://png.pngtree.com/thumb_back/fh260/background/20230702/pngtree-3d-render-of-a-programmer-in-action-image_3752209.jpg" alt="Hariraj.G">
+            </div>
+            <div class="profile-text">
+                <p>Hello,</p>
+                <p>I’m Hariraj G., a second-year undergraduate student at Rajalakshmi Engineering College, pursuing a B.E. in Computer Science Engineering with a focus on frontend development. My journey in tech began with a passion for web development, and I’ve since expanded my skills to include HTML, CSS, and JavaScript. I’m also experienced in designing and am always eager to explore new areas within technology.</p>
+                <p>In addition to my technical pursuits, I’m a freelancer and a prompt engineer, engaged in various problem-solving tasks and app creation efforts. I’m dedicated to delivering high-quality work and always looking for opportunities to innovate and enhance my skills.</p>
+                <p>When it comes to design, I prefer creating visually engaging experiences. My current focus is on developing a portfolio that features a landscape background, dynamic animations, and unique design elements to stand out and reflect my skills and creativity.</p>
+                <p>I’m excited about the future and the potential to grow within the tech industry, and I look forward to connecting with like-minded individuals and professionals.</p>
+                <p>Thank you for taking the time to learn more about me.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hariraj.G. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const sprinkleCount = 100;
+
+        for (let i = 0; i < sprinkleCount; i++) {
+            const sprinkle = document.createElement("div");
+            sprinkle.classList.add("sprinkle");
+            sprinkle.style.left = `${Math.random() * 100}vw`;
+            sprinkle.style.animationDuration = `${Math.random() * 5 + 5}s`;
+            sprinkle.style.animationDelay = `${Math.random() * 10}s`;
+            document.body.appendChild(sprinkle);
+        }
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const sprinkleCount = 100;
+
+        for (let i = 0; i < sprinkleCount; i++) {
+            const sprinkle = document.createElement("div");
+            sprinkle.classList.add("sprinkle");
+            sprinkle.style.left = `${Math.random() * 100}vw`;
+            sprinkle.style.animationDuration = `${Math.random() * 5 + 5}s`; 
+            sprinkle.style.animationDelay = `${Math.random() * 10}s`; 
+            document.body.appendChild(sprinkle);
+        }
+
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                header.style.transform = "translateY(-100%)";
+            } else {
+               
+                header.style.transform = "translateY(0)";
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    });
+</script>
+

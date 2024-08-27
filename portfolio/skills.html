@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="animated-button">Home</a></li>
+                <li><a href="about.html" class="animated-button">About</a></li>
+                <li><a href="projects.html" class="animated-button">Projects</a></li>
+                <li><a href="contact.html" class="animated-button">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content fade-in-content">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill bounce-in">
+                <img src="https://cdn-icons-png.flaticon.com/512/919/919827.png" alt="HTML Icon">
+                <h3>HTML</h3>
+                <p>Proficient in structuring content for the web.</p>
+            </div>
+            <div class="skill bounce-in">
+                <img src="https://cdn-icons-png.flaticon.com/512/919/919826.png" alt="CSS Icon">
+                <h3>CSS</h3>
+                <p>Experienced in designing responsive and visually appealing web pages.</p>
+            </div>
+            <div class="skill bounce-in">
+                <img src="https://cdn-icons-png.flaticon.com/512/919/919828.png" alt="JavaScript Icon">
+                <h3>JavaScript</h3>
+                <p>Skilled in creating dynamic and interactive web applications.</p>
+            </div>
+            <div class="skill bounce-in">
+                <img src="https://cdn-icons-png.flaticon.com/512/953/953060.png" alt="Design Icon">
+                <h3>Designing</h3>
+                <p>Creative in crafting intuitive user interfaces and experiences.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hariraj.G. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const sprinkleCount = 100;
+
+        for (let i = 0; i < sprinkleCount; i++) {
+            const sprinkle = document.createElement("div");
+            sprinkle.classList.add("sprinkle");
+            sprinkle.style.left = `${Math.random() * 100}vw`; 
+            sprinkle.style.animationDuration = `${Math.random() * 5 + 5}s`; 
+            sprinkle.style.animationDelay = `${Math.random() * 10}s`; 
+            document.body.appendChild(sprinkle);
+        }
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const sprinkleCount = 100; 
+
+        for (let i = 0; i < sprinkleCount; i++) {
+            const sprinkle = document.createElement("div");
+            sprinkle.classList.add("sprinkle");
+            sprinkle.style.left = `${Math.random() * 100}vw`; 
+            sprinkle.style.animationDuration = `${Math.random() * 5 + 5}s`; 
+            sprinkle.style.animationDelay = `${Math.random() * 10}s`; 
+            document.body.appendChild(sprinkle);
+        }
+
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                header.style.transform = "translateY(-100%)"; 
+            } else {
+                header.style.transform = "translateY(0)"; 
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    });
+</script>

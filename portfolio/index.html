@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="snowflakes" aria-hidden="true"></div>
+
+    <header>
+        <h1>Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="animated-button">Home</a></li>
+                <li><a href="about.html" class="animated-button">About</a></li>
+                <li><a href="skills.html" class="animated-button">Skills</a></li>
+                <li><a href="projects.html" class="animated-button">Projects</a></li>
+                <li><a href="contact.html" class="animated-button">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content homepage-background">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Hi, I’m Hariraj.G, a second-year CSE student at Rajalakshmi Engineering College. I specialize in frontend web development with skills in HTML, CSS, JavaScript, and designing.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hariraj.G. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+	
+</body>
+</html>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const sprinkleCount = 100;
+
+        for (let i = 0; i < sprinkleCount; i++) {
+            const sprinkle = document.createElement("div");
+            sprinkle.classList.add("sprinkle");
+            sprinkle.style.left = `${Math.random() * 100}vw`;
+            sprinkle.style.animationDuration = `${Math.random() * 5 + 5}s`; 
+            sprinkle.style.animationDelay = `${Math.random() * 10}s`; 
+            document.body.appendChild(sprinkle);
+        }
+    });
+</script>
+
